@@ -53,14 +53,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            flex-shrink: 0;
+        }
+
+        .header-device {
+            height: clamp(48px, 8vw, 72px);
+            width: auto;
+            display: block;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.07));
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
             font-style: italic;
-            color: #FF8C42;
-            text-shadow: 2px 2px 4px rgba(255, 140, 66, 0.2);
+            text-shadow: 2px 2px 4px rgba(255, 140, 66, 0.15);
         }
 
         .nav-links {
@@ -351,6 +368,10 @@
                 display: none;
             }
 
+            .header-device {
+                display: none;
+            }
+
             .hero {
                 margin: 2rem auto;
             }
@@ -369,7 +390,28 @@
 <body>
     <header>
         <nav>
-            <div class="logo">The Activity Hub</div>
+            <div class="nav-brand">
+                <img
+                    class="header-device"
+                    src="images/1_Home.png"
+                    width="3500"
+                    height="6875"
+                    alt=""
+                    decoding="async"
+                />
+                <div class="logo">
+                    <span class="logo-word-yellow">The</span> <span class="logo-word-orange">Activity</span>
+                    <span class="logo-word-yellow"> Hub</span>
+                </div>
+                <img
+                    class="header-device"
+                    src="images/1_Forum.png"
+                    width="3500"
+                    height="6875"
+                    alt=""
+                    decoding="async"
+                />
+            </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
